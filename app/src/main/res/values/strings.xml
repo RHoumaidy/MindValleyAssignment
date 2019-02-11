@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MindValleyTest</string>
+    <string name="user_profile_trans">USER_PROFILE_TRANS</string>
+    <string name="preview_img_trans">PREVIEW_IMG_TRANS</string>
+    <string name="thumb_trans">THUMB_TRANS</string>
+    <string name="profile_trans">PROFILE_TRANS</string>
+</resources>

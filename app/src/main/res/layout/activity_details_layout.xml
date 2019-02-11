@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp"
+        app:cardUseCompatPadding="true">
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            
+            <ImageView
+                android:id="@+id/previewImgV"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:scaleType="centerCrop"
+                android:transitionName="@string/preview_img_trans"/>
+            
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/thumbImgV"
+                android:background="@drawable/photo_title_bg_top"
+                android:gravity="center_vertical"
+                android:paddingBottom="5dp"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:paddingTop="5dp">
+                
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/userProfileImgV"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentStart="true"
+                    android:transitionName="@string/user_profile_trans"
+                    app:civ_border_color="#fff"
+                    app:civ_border_width="3dp"
+                    app:civ_circle_background_color="#000"
+                    app:civ_fill_color="#000"/>
+                
+                <TextView
+                    android:id="@+id/userNameTxtV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/userProfileImgV"
+                    android:textColor="#fff"/>
+                
+                <ImageView
+                    android:id="@+id/fullScreenImgV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="5dp"
+                    android:src="@drawable/ic_fullscreen_white_24dp"/>
+            </RelativeLayout>
+        
+        
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+    
+    <RelativeLayout
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/likesTxtV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="5dp"
+            android:drawableStart="@drawable/ic_favorite_border_black_24dp"
+            android:gravity="center_vertical"
+            android:text="13"
+            android:layout_alignParentStart="true"
+            android:textColor="#000"/>
+
+        
+        <ImageView
+            android:id="@+id/openWebImgV"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_grid_world"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/categoriesRV"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
