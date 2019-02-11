@@ -51,11 +51,17 @@ public class PreviewActivity extends AppCompatActivity {
                     }
 
                     @Override
-                    public void onSuccess(byte[] data) {
-                        Bitmap bitmap = BitmapFactory.decodeByteArray(data,0,data.length);
-                        previewImgV.setImage(ImageSource.bitmap(bitmap));
-                        progressBar.setVisibility(View.GONE);
-                        progressTxtV.setVisibility(View.GONE);
+                    public void onSuccess(final byte[] data) {
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                Bitmap bitmap = BitmapFactory.decodeByteArray(data,0,data.length);
+                                previewImgV.setImage(ImageSource.bitmap(bitmap));
+                                progressBar.setVisibility(View.GONE);
+                                progressTxtV.setVisibility(View.GONE);
+                            }
+                        });
+
                     }
 
                     @Override
@@ -67,6 +73,6 @@ public class PreviewActivity extends AppCompatActivity {
                     public void onCanceled() {
 
                     }
-                });
+                }).execute();
     }
 }
