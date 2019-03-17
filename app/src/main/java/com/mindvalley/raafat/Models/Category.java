@@ -1,9 +1,7 @@
-package com.mindvalley.raafat.Modules;
+package com.mindvalley.raafat.Models;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-
-import java.util.List;
 
 /**
  * Created by Raafat Alhoumaidy on 2/8/2019 @7:31 PM.

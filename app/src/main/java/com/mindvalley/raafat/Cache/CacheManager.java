@@ -57,7 +57,7 @@ public class CacheManager {
 
     public void addItem(String key, byte[] data) {
         CacheItem cacheItem = new CacheItem(key, data);
-        cache.add(0, cacheItem);
+        cache.add(0, cacheItem);  //add item at the first position to implement LRU (Least Recently Used replacement approach)
         size += data.length;
 
     }
@@ -72,7 +72,7 @@ public class CacheManager {
     }
 
     public void removeOldestItme() {
-        CacheItem cacheItem = cache.get(cache.size() - 1);
+        CacheItem cacheItem = cache.get(cache.size() - 1); //remove item from the last position to implement LRU (Least Recently Used replacement approach)
         removeItem(cacheItem.getKey());
     }
 
@@ -85,7 +85,7 @@ public class CacheManager {
     public CacheItem cacheHit(String key) {
         CacheItem res = null;
         int idx = cache.indexOf(new CacheItem(key));
-        if (idx >= 0) {
+        if (idx >= 0) {// if the item is exists, add it to the first position to implement LRU (Least Recently Used replacement approach)
             res = cache.get(idx);
             cache.remove(idx);
             addItem(res.getKey(),res.getData());

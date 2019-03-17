@@ -7,7 +7,7 @@ import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.mindvalley.raafat.Modules.Category;
+import com.mindvalley.raafat.Models.Category;
 import com.mindvalley.raafat.R;
 
 import java.util.List;

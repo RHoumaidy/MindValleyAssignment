@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.mindvalley.raafat.Cache.ImageLoader;
-import com.mindvalley.raafat.Modules.Photo;
+import com.mindvalley.raafat.Models.Photo;
 import com.mindvalley.raafat.R;
 
 import java.util.List;

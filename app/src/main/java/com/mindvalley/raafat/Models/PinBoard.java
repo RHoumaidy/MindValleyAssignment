@@ -1,4 +1,4 @@
-package com.mindvalley.raafat.Modules;
+package com.mindvalley.raafat.Models;
 
 import java.util.ArrayList;
 import java.util.List;

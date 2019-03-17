@@ -9,7 +9,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.mindvalley.raafat.Modules.Photo;
+import com.mindvalley.raafat.Models.Photo;
 import com.mindvalley.raafat.MyApplication;
 import com.mindvalley.raafat.R;
 

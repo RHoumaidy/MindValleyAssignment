@@ -1,6 +1,6 @@
 package com.mindvalley.raafat.Interfaces;
 
-import com.mindvalley.raafat.Modules.Photo;
+import com.mindvalley.raafat.Models.Photo;
 
 import java.util.List;
 

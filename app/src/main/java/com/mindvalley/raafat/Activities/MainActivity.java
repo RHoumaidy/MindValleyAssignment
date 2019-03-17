@@ -1,32 +1,25 @@
 package com.mindvalley.raafat.Activities;
 
+import android.arch.lifecycle.Observer;
+import android.arch.lifecycle.ViewModelProvider;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.support.design.widget.FloatingActionButton;
+import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.util.Pair;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.ImageView;
-import android.widget.ProgressBar;
-import android.widget.Toast;
 
 import com.mindvalley.raafat.Adapters.PhotosAdapter;
-import com.mindvalley.raafat.Cache.CacheManager;
-import com.mindvalley.raafat.Cache.FileDownloader;
-import com.mindvalley.raafat.Cache.ImageLoader;
+import com.mindvalley.raafat.Models.Photo;
 import com.mindvalley.raafat.MyApplication;
 import com.mindvalley.raafat.R;
-import com.mindvalley.raafat.Views.ProgressHUD;
 
-import de.hdodenhof.circleimageview.CircleImageView;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private RecyclerView pinboardRV;
@@ -38,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         pinboardRV = findViewById(R.id.pinboardRV);
 
         photosAdapter = new PhotosAdapter(this, MyApplication.getInstance().pinBoard.getPhotos());

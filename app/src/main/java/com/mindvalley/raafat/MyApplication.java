@@ -8,7 +8,7 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 
 import com.mindvalley.raafat.Interfaces.ApiClient;
-import com.mindvalley.raafat.Modules.PinBoard;
+import com.mindvalley.raafat.Models.PinBoard;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
